@@ -10,6 +10,8 @@ print("Information of Dataset: \n")
 print(df.info())
 print("Description of Dataset: \n")
 print(df.describe())
+
+#finding missing values
 print("Missing value or not?? \n")
 print(df.isnull().sum())
 df['Arrival Delay']=df['Arrival Delay'].fillna(112)
