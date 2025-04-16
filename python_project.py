@@ -14,6 +14,8 @@ print(df.describe())
 #finding missing values
 print("Missing value or not?? \n")
 print(df.isnull().sum())
+
+#filling missing values with 112
 df['Arrival Delay']=df['Arrival Delay'].fillna(112)
 print("1st 10 rows of datset: \n")
 print(df.head(10))
