@@ -21,6 +21,8 @@ print("1st 10 rows of datset: \n")
 print(df.head(10))
 print("last 10 rows of datset: \n")
 print(df.tail(10))
+
+#print rows and column numbers
 print("Shape of DataSet:  \n",df.shape)
 print("Columns of DataSet:  \n",df.columns)
 print("Datatype of DataSet: \n ",df.dtypes)
