@@ -37,6 +37,7 @@ for col in numeric_cols:
     df[col] = df[col].fillna(df[col].mode()[0])
 
 # Set plot style
+#rc params is a dict storing all changeble aspects rc stands for runtime configuration
 sns.set(style="whitegrid")
 plt.rcParams['figure.figsize'] = (10, 6)
 
