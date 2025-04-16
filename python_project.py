@@ -28,6 +28,7 @@ print("Columns of DataSet:  \n",df.columns)
 print("Datatype of DataSet: \n ",df.dtypes)
 
 # Fill missing values in all columns with the mode
+#filling missing values with mode and locating at 1st index
 df = df.fillna(df.mode().iloc[0])
 
 numeric_cols = ['Age', 'Flight Distance', 'Check-in Service', 'Online Boarding',
