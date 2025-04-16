@@ -105,6 +105,7 @@ df.groupby('Satisfaction')[rating_cols].mean().T.plot(kind='bar', colormap='viri
 plt.title('Average Ratings by Satisfaction')
 plt.ylabel('Average Rating')
 plt.xticks(rotation=45)
+#fixing the layout
 plt.tight_layout()
 plt.show()
 
