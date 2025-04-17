@@ -119,7 +119,7 @@ plt.title('Average Delays by Satisfaction')
 plt.xlabel('Delay (minutes)')
 plt.tight_layout()
 plt.show()
-#
+
 
 # Histogram: Age
 sns.histplot(df['Age'], bins=30, kde=True, color='teal')
