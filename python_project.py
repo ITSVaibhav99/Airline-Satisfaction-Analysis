@@ -31,6 +31,8 @@ print("Datatype of DataSet: \n ",df.dtypes)
 #filling missing values with mode and locating at 1st index
 df = df.fillna(df.mode().iloc[0])
 
+#handling only numeric colums and then checking iff all values are numeric. If not filling
+#them with mode
 numeric_cols = ['Age', 'Flight Distance', 'Check-in Service', 'Online Boarding',
                 'Departure Delay', 'Arrival Delay', 'Seat Comfort']
 for col in numeric_cols:
@@ -78,7 +80,8 @@ sns.boxplot(data=df, x='Satisfaction', y='Online Boarding', hue='Satisfaction', 
 plt.title('Online Boarding by Satisfaction')
 plt.show()
 
-# 5) Satisfaction Based on Flight Distance or Duration
+#using kde to show smooth transition of data
+5) Satisfaction Based on Flight Distance or Duration
 sns.histplot(data=df, x='Flight Distance', hue='Satisfaction', bins=30, kde=True, palette='Set1')
 plt.title('Flight Distance and Satisfaction')
 plt.show()
@@ -94,13 +97,6 @@ sns.heatmap(corr, annot=True, cmap='coolwarm')
 plt.title('Correlation Heatmap')
 plt.show()
 
-# Stacked Bar Chart: Class vs Satisfaction
-crosstab = pd.crosstab(df['Class'], df['Satisfaction'], normalize='index')
-ax = crosstab.plot(kind='bar', stacked=True, colormap='Set3')
-plt.title('Stacked Bar Chart: Class vs Satisfaction')
-plt.ylabel('Proportion')
-plt.tight_layout()
-plt.show()
 
 # Scatter Plot
 sns.scatterplot(data=df, x='Flight Distance', y='Age', hue='Satisfaction', palette='cool')
@@ -123,6 +119,7 @@ plt.title('Average Delays by Satisfaction')
 plt.xlabel('Delay (minutes)')
 plt.tight_layout()
 plt.show()
+#
 
 # Histogram: Age
 sns.histplot(df['Age'], bins=30, kde=True, color='teal')
